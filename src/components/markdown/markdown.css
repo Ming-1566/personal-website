@@ -1,0 +1,49 @@
+.reading-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 55px; align-items: start; padding-block: 35px; }
+.reading-layout.without-toc { grid-template-columns: minmax(0, 850px); justify-content: center; }
+.toc-sidebar { position: sticky; top: 120px; min-width: 0; }
+.toc-sidebar summary { font-size: 13px; color: #d5e2ee; cursor: pointer; padding: 12px 0; }
+.toc-sidebar nav { display: grid; border-left: 1px solid #304150; padding-block: 9px; margin-top: 8px; max-height: 60vh; overflow-y: auto; }
+.toc-sidebar a { color: #a1b0c4; font-size: 12px; line-height: 1.8; padding-block: 7px; padding-right: 8px; overflow-wrap: anywhere; }
+.toc-sidebar a:hover, .toc-sidebar a.active { color: var(--accent); background: #13232d; }
+.markdown-body { min-width: 0; overflow-wrap: anywhere; color: #c9d4e2; font-size: 16px; line-height: 1.95; }
+.markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 { scroll-margin-top: 115px; color: #edf3fb; line-height: 1.65; font-weight: 550; margin: 40px 0 20px; }
+.markdown-body > :first-child { margin-top: 0; }
+.markdown-body h2 { font-size: 27px; }
+.markdown-body h3 { font-size: 23px; }
+.markdown-body h4 { font-size: 20px; }
+.markdown-body .markdown-h1 { font-size: 30px; }
+.markdown-body p { color: inherit; margin-block: 18px; }
+.markdown-body ul { list-style: disc; padding-left: 25px; margin-block: 18px; }
+.markdown-body ol { list-style: decimal; padding-left: 25px; margin-block: 18px; }
+.markdown-body li { margin-block: 8px; }
+.markdown-body li > p { margin-block: 8px; }
+.markdown-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.markdown-body blockquote { border-left: 3px solid #4f9b96; background: #11212b; margin: 24px 0; padding: 4px 20px; color: #b1cad4; }
+.markdown-body hr { border: 0; border-top: 1px solid #2b3b49; margin-block: 35px; }
+.markdown-body img { display: block; max-width: 100%; height: auto; margin-block: 22px; border-radius: 10px; }
+.markdown-image-fallback { display: block; padding: 22px; margin-block: 18px; border: 1px dashed #34485b; color: #a2b4c5; font-size: 13px; }
+.markdown-table { max-width: 100%; overflow-x: auto; margin-block: 25px; border: 1px solid #334452; border-radius: 9px; }
+.markdown-body table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.markdown-body th, .markdown-body td { border-bottom: 1px solid #334452; padding: 11px 15px; text-align: left; min-width: 100px; }
+.markdown-body th { background: #192635; font-weight: 550; }
+.markdown-body input[type="checkbox"] { display: inline-block; width: auto; margin-right: 8px; }
+.markdown-body :not(pre) > code { font: .85em/1.7 ui-monospace, Consolas, monospace; color: #9ae5d9; background: #1a2933; padding: 3px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+.markdown-body pre { max-width: 100%; overflow: auto; background: #101823; border: 1px solid #2b3d4f; border-radius: 10px; padding: 22px; margin-block: 26px; line-height: 1.8; }
+.markdown-body pre code { color: #d4dfed; font: 13px/1.85 ui-monospace, Consolas, monospace; white-space: pre; }
+.hljs-comment, .hljs-quote { color: #96a7b6; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-type { color: #d7b5fa; }
+.hljs-string, .hljs-regexp, .hljs-addition { color: #a0dfc2; }
+.hljs-title, .hljs-section, .hljs-function, .hljs-built_in { color: #8ecaf7; }
+.hljs-number, .hljs-symbol, .hljs-attr { color: #f0cb9a; }
+.hljs-variable, .hljs-params { color: #dbe4ef; }
+.hljs-deletion { color: #f7aeae; }
+@media (max-width: 1024px) { .reading-layout { grid-template-columns: 180px minmax(0, 1fr); gap: 30px; } }
+@media (max-width: 767px) {
+  .reading-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-top: 20px; }
+  .toc-sidebar { position: static; border: 1px solid #304150; border-radius: 10px; padding: 6px 18px; }
+  .toc-sidebar nav { max-height: 260px; margin-bottom: 15px; }
+  .markdown-body { font-size: 15px; }
+  .markdown-body h2 { font-size: 24px; }
+  .markdown-body .markdown-h1 { font-size: 27px; }
+  .markdown-body pre { padding: 16px; }
+}
